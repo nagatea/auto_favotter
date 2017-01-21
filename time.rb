@@ -1,5 +1,5 @@
 utc_time = Time.now
-time = (60*60*9) # 取得される時間はUTC基準なのでJST基準にするために9時間分早めます
+time = utc_time + (60*60*9) # 取得される時間はUTC基準なのでJST基準にするために9時間分早めます
 
 y = time.year
 mon = time.month
