@@ -1,4 +1,5 @@
-time = Time.now
+utc_time = Time.now
+time = (60*60*9) # 取得される時間はUTC基準なのでJST基準にするために9時間分早めます
 
 y = time.year
 mon = time.month
@@ -36,4 +37,4 @@ if s < 10
     s_s = "0" << s_s
 end
 
-TIME_CODE = "[" + y_s + "/" + mon_s + "/" + d_s + "/ " + h_s + "時" + min_s + "分" + s_s + "秒]" 
+TIME_CODE = "[" + y_s + "/" + mon_s + "/" + d_s + " " + h_s + "時" + min_s + "分" + s_s + "秒]" 
