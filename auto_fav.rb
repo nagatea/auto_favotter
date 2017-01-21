@@ -16,7 +16,7 @@ end
       end
 
 begin
-      fav_retry || = 0
+      fav_retry ||= 0
       client.update("auto_favotterを起動しました。\n#{TIME_CODE}")
       stream_client.user do |status|
           if status.is_a?(Twitter::Tweet)
