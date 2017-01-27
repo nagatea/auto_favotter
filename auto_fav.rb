@@ -17,7 +17,7 @@ end
 
 begin
       fav_retry ||= 0
-      client.update("auto_favotterを起動しました。\n#{TIME_CODE}")
+      client.update("auto_favotterを再起動しました。\n#{time_code}")
       stream_client.user do |status|
           if status.is_a?(Twitter::Tweet)
             client.favorite(status.id)
@@ -25,7 +25,7 @@ begin
       end
       
 rescue => exception
-      client.update("エラーが発生したのでauto_favotterを停止しました。\n#{TIME_CODE}")
       fav_retry += 1
+      client.update("エラーが発生したのでauto_favotterを停止しました。(リトライ回数#{fav_retry}回目)\n#{time_code}")
       retry if fav_retry < 5
 end
