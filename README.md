@@ -21,14 +21,7 @@ TLに流れてきたツイートを片っ端からふぁぼします。
 	$ git clone git@github.com:nagatea/auto_favotter.git
 	```
 
-2. bundle installします．
-
-	```
-	$ cd auto_favotter
-	$ bundle install
-	```
-
-3. Twitterのアクセストークンの設定を行います。作成したherokuのアプリケーションの`Settings`より`Config Variables`の設定を以下のように入力してください。
+2. Twitterのアクセストークンの設定を行います。作成したherokuのアプリケーションの`Settings`より`Config Variables`の設定を以下のように入力してください。
 
 	```
     MY_CONSUMER_KEY = TwitterアカウントのConsumer Key
@@ -37,6 +30,6 @@ TLに流れてきたツイートを片っ端からふぁぼします。
     MY_ACCESS_TOKEN_SECRET = TwitterアカウントのAccess Token Secret
 	```
 
-4. herokuにデプロイする。
+3. herokuにデプロイする。
 
     うまくいけば勝手にふぁぼってくれると思います。
