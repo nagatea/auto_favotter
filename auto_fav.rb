@@ -26,6 +26,6 @@ begin
       
 rescue => exception
       fav_retry += 1
-      client.update("エラーが発生したのでauto_favotterを停止しました。(リトライ回数#{fav_retry}回目)\n#{time_code}")
+      client.update("エラーが発生したのでauto_favotterを停止しました。(リトライ回数#{fav_retry}回目)\n#{exception.message}\n#{time_code}")
       retry if fav_retry < 5
 end
